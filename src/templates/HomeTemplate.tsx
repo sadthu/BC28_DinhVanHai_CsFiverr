@@ -7,11 +7,10 @@ type Props = {}
 
 export default function HomeTemplate({}: Props) {
   return (
-    <>
+    <div className='container'>
         <Header />
             <Outlet />
         <Footer />
-    
-    </>
+    </div>
   )
 }

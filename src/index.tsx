@@ -13,6 +13,7 @@ import Register from './pages/Register/Register';
 import UserDetail from './pages/UserDetail/UserDetail';
 import TypeJod from './pages/TypeJod/TypeJod';
 import Admin from './pages/Admin/Admin';
+import './assets/scss/style.scss'
 export const history = createBrowserHistory();
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -33,7 +34,6 @@ root.render(
         </Route>
       </Routes>
     </HistoryRouter>
-    
   </Provider>
 );
 
