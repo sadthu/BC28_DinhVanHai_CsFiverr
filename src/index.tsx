@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { store } from './redux/configStore'
 import HomeTemplate from './templates/HomeTemplate';
 import { createBrowserHistory } from "history";
-import { Route, Router, unstable_HistoryRouter as HistoryRouter,Routes } from 'react-router-dom';
+import { Route, Router, unstable_HistoryRouter as HistoryRouter,Routes,Navigate } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import ListJod from './pages/ListJod/ListJod';
 import JodDetail from './pages/JodDetail/JodDetail';
@@ -22,16 +22,17 @@ root.render(
   <Provider store={store}>
     <HistoryRouter history={history}>
       <Routes>
-        <Route path='' element={<HomeTemplate/>}>
-          <Route index element={<Home/>}></Route>
+        <Route index element={<Home/>}></Route>
+        <Route path='hometemplate' element={<HomeTemplate/>}>
           <Route path='listjod' element={<ListJod/>}></Route>
-          <Route path='joddetail' element={<JodDetail/>}></Route>
-          <Route path='login' element={<Login/>}></Route>
-          <Route path='register' element={<Register/>}></Route>
-          <Route path='usedetail' element={<UserDetail/>}></Route>
-          <Route path='typejod' element={<TypeJod/>}></Route>
-          <Route path='admin' element={<Admin/>}></Route>
-        </Route>
+            <Route path='joddetail' element={<JodDetail/>}></Route>
+            <Route path='login' element={<Login/>}></Route>
+            <Route path='register' element={<Register/>}></Route>
+            <Route path='usedetail' element={<UserDetail/>}></Route>
+            <Route path='typejod' element={<TypeJod/>}></Route>
+            <Route path='admin' element={<Admin/>}></Route>
+          </Route>
+        <Route path='*' element={<Navigate to=''/>}></Route>
       </Routes>
     </HistoryRouter>
   </Provider>

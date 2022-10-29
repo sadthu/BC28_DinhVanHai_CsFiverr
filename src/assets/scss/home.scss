@@ -1,0 +1,29 @@
+div {
+    div {
+
+        header {
+            position: fixed;
+            z-index: 10;
+        }
+        .carousell {
+            height:calc(80vh - 95px);
+            position: relative;
+            color: white;
+            #carouselExampleControls {
+                .carousel {
+                    .carousel-item {
+                        img {
+                            height: calc(80vh - 95px);
+                        }
+                    }
+                }
+            }
+            .carousell__content {
+                position: absolute;
+                z-index: 20;
+                bottom: 35%;
+                
+            }
+        }
+    }
+}

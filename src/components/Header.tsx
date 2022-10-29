@@ -27,8 +27,6 @@ export default function Header({ }: Props) {
           </ul>
         </div>
       </nav>
-
-
     </div>
   )
 }
