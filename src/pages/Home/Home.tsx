@@ -2,8 +2,12 @@ import React from 'react'
 import '../../assets/scss/home.scss'
 
 type Props = {}
-
 export default function Home({ }: Props) {
+  const imgFb = require('../../assets/img/fb.png')
+  const imgGg = require('../../assets/img/gg.png')
+  const imgNetfix = require('../../assets/img/netfix.png')
+  const imgPG = require('../../assets/img/p&g.png')
+  const imgPP = require('../../assets/img/paypal.png')
   return (
     <div>
       <div>
@@ -62,6 +66,19 @@ export default function Home({ }: Props) {
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+        <section className='link bg-light'>
+          <span>Trusted by:</span>
+          <img src={imgFb} alt="..." />
+          <img src={imgGg} alt="..." />
+          <img src={imgNetfix} alt="..." />
+          <img src={imgPG} alt="..." />
+          <img src={imgPP} alt="..." />
+        </section>
+        <section className='services'>
+          <div className='container'>
+            
           </div>
         </section>
       </div>

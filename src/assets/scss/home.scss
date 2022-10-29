@@ -25,5 +25,18 @@ div {
                 
             }
         }
+        .link {
+            padding: 15px 0;
+            justify-content: center;
+            display: flex;
+            gap: 50px;
+            span {
+                line-height: 4;
+            }
+            img {
+                
+                
+            }
+        }
     }
 }
