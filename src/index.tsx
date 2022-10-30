@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { store } from './redux/configStore'
 import HomeTemplate from './templates/HomeTemplate';
-import { createBrowserHistory } from "history";
+import { createBrowserHistory } from 'history';
 import { Route, Router, unstable_HistoryRouter as HistoryRouter,Routes,Navigate } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import ListJod from './pages/ListJod/ListJod';

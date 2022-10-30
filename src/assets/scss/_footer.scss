@@ -1,0 +1,14 @@
+@import '../scss/variables';
+div {
+    .container {
+        ul {
+            list-style: none;
+            li {
+                a {
+                    text-decoration: none;
+                    color: $gray500;
+                }
+            }
+        }
+    }
+}

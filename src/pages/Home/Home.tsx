@@ -1,5 +1,6 @@
 import React from 'react'
-import '../../assets/scss/home.scss'
+// import '../../assets/scss/home.scss'
+import Footer from '../../components/Footer'
 
 type Props = {}
 export default function Home({ }: Props) {
@@ -82,6 +83,7 @@ export default function Home({ }: Props) {
           </div>
         </section>
       </div>
+      <Footer/>
     </div>
   )
 }
