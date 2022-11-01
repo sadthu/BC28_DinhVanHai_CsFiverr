@@ -1,6 +1,8 @@
 import React from 'react'
-// import '../../assets/scss/home.scss'
+import Slider from 'react-slick'
 import Footer from '../../components/Footer'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 type Props = {}
 export default function Home({ }: Props) {
@@ -9,7 +11,13 @@ export default function Home({ }: Props) {
   const imgNetfix = require('../../assets/img/netfix.png')
   const imgPG = require('../../assets/img/p&g.png')
   const imgPP = require('../../assets/img/paypal.png')
- 
+  const Settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    centerMode:true,
+  };
   return (
     <div>
       <div>
@@ -76,11 +84,37 @@ export default function Home({ }: Props) {
         </section>
         <section className='services'>
           <div className='container'>
-            
+            <h3>Popular professional services</h3>
+            <Slider {...Settings}>
+              <div>
+                <h3>1</h3>
+              </div>
+              <div>
+                <h3>2</h3>
+              </div>
+              <div>
+                <h3>3</h3>
+              </div>
+              <div>
+                <h3>4</h3>
+              </div>
+              <div>
+                <h3>5</h3>
+              </div>
+              <div>
+                <h3>6</h3>
+              </div>
+              <div>
+                <h3>7</h3>
+              </div>
+              <div>
+                <h3>8</h3>
+              </div>
+            </Slider>
           </div>
         </section>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   )
 }

@@ -122,5 +122,15 @@ div {
       img {
       }
     }
+    .services {
+      .container {
+        .slick-next{
+          right: 0;
+        }
+        .slick-prev{
+          left: 0;
+        }
+      }
+    }
   }
 }
