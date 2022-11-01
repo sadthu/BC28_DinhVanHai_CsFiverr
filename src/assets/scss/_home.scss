@@ -1,42 +1,126 @@
 div {
-    div {
-
-        header {
-            position: fixed;
-            z-index: 10;
-        }
-        .carousell {
-            height:calc(80vh - 95px);
-            position: relative;
-            color: white;
-            #carouselExampleControls {
-                .carousel {
-                    .carousel-item {
-                        img {
-                            height: calc(80vh - 95px);
-                        }
-                    }
-                }
-            }
-            .carousell__content {
-                position: absolute;
-                z-index: 20;
-                bottom: 35%;
-                
-            }
-        }
-        .link {
-            padding: 15px 0;
-            justify-content: center;
+  div {
+    header {
+      position: fixed;
+      z-index: 10;
+      nav {
+        .logo {
+          a {
+          }
+          form {
             display: flex;
-            gap: 50px;
-            span {
-                line-height: 4;
+            .form-control {
             }
-            img {
-                
-                
+            button {
+              margin-left: 5px;
+              background-color: #1dbf73;
+              color: white;
             }
+          }
         }
+        .form {
+          ul {
+            li {
+              padding-left: 30px;
+              .genaral:hover {
+                opacity: 0.8;
+              }
+              &:last-child {
+                a {
+                  padding: 5px 15px;
+                  font-size: 14px;
+                  transition: all 0.2s linear;
+                  border: 1px solid white;
+                  &:hover {
+                    background-color: #1dbf73;
+                    border-color: #1dbf73;
+                  }
+                }
+                
+              }
+            }
+          }
+        }
+      }
     }
+    .carousell {
+      height: calc(80vh - 95px);
+      position: relative;
+      color: white;
+      #carouselExampleControls {
+        .carousel-inner {
+          .carousel-item:nth-child(1) {
+            background: url(../img/img1.webp) center / cover no-repeat;
+            height: calc(80vh - 95px);
+          }
+          .carousel-item:nth-child(2) {
+            background: url(../img/img2.webp) center / cover no-repeat;
+            height: calc(80vh - 95px);
+          }
+          .carousel-item:nth-child(3) {
+            background: url(../img/img3.webp) center / cover no-repeat;
+            height: calc(80vh - 95px);
+          }
+          .carousel-item:nth-child(4) {
+            background: url(../img/img4.webp) center / cover no-repeat;
+            height: calc(80vh - 95px);
+          }
+          .carousel-item:nth-child(5) {
+            background: url(../img/img5.webp) center / cover no-repeat;
+            height: calc(80vh - 95px);
+          }
+        }
+      }
+      .carousell__content {
+        position: absolute;
+        z-index: 20;
+        bottom: 35%;
+        .container {
+          div {
+            form {
+              .form-control {
+              }
+              button {
+                margin-left: 5px;
+                background-color: #1dbf73;
+                color: white;
+                &:hover {
+                    background-color: #198754;
+                }
+              }
+            }
+            p {
+                margin-top: 20px;
+              span {
+                font-size: 14px;
+                font-weight: 600;
+                margin-left: 15px;
+                padding: 5px 8px;
+                border: 1px solid white;
+                border-radius: 50px;
+                cursor: pointer;
+                transition: all 0.2s linear;
+                &:hover {
+                    background-color: white;
+                    color: #212529;
+                }
+              }
+              
+            }
+          }
+        }
+      }
+    }
+    .link {
+      padding: 15px 0;
+      justify-content: center;
+      display: flex;
+      gap: 50px;
+      span {
+        line-height: 4;
+      }
+      img {
+      }
+    }
+  }
 }
