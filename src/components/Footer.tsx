@@ -2,13 +2,13 @@ import React from "react";
 
 type Props = {};
 
-export default function Footer({}: Props) {
+export default function Footer({ }: Props) {
   return (
-    <div>
-      <div className="container d-flex justify-content-between">
+    <footer>
+      <div className="footer-list container d-flex justify-content-between">
         <ul>
           <li>
-            <a href="#">Categorles</a>
+            Categorles
           </li>
           <li>
             <a href="#">Graphics & Design</a>
@@ -43,157 +43,152 @@ export default function Footer({}: Props) {
         </ul>
         <ul>
           <li>
-            <a href="#">Graphics & Design</a>
+            About
           </li>
           <li>
-            <a href="#">Digital Marketing</a>
+            <a href="#">Careers</a>
           </li>
           <li>
-            <a href="#">Writing & Translation</a>
+            <a href="#">Careers</a>
           </li>
           <li>
-            <a href="#">Video & Animations</a>
+            <a href="#">Press & News</a>
           </li>
           <li>
-            <a href="#">Music & Audio</a>
+            <a href="#">Parnerships</a>
           </li>
           <li>
-            <a href="#">Programming & Tech</a>
+            <a href="#">Privacy Policy</a>
           </li>
           <li>
-            <a href="#">Data</a>
+            <a href="#">Terms of Service</a>
           </li>
           <li>
-            <a href="#">Business</a>
+            <a href="#">Intellectual Property Claims</a>
           </li>
           <li>
-            <a href="#">Lifestyle</a>
-          </li>
-          <li>
-            <a href="#">Sitemap</a>
+            <a href="#">Investor Relations</a>
           </li>
         </ul>
         <ul>
           <li>
-            <a href="#">Graphics & Design</a>
+            Support
           </li>
           <li>
-            <a href="#">Digital Marketing</a>
+            <a href="#">Help & Support</a>
           </li>
           <li>
-            <a href="#">Writing & Translation</a>
+            <a href="#">Trust & Safety</a>
           </li>
           <li>
-            <a href="#">Video & Animations</a>
+            <a href="#">Selling on Fiverr</a>
           </li>
           <li>
-            <a href="#">Music & Audio</a>
-          </li>
-          <li>
-            <a href="#">Programming & Tech</a>
-          </li>
-          <li>
-            <a href="#">Data</a>
-          </li>
-          <li>
-            <a href="#">Business</a>
-          </li>
-          <li>
-            <a href="#">Lifestyle</a>
-          </li>
-          <li>
-            <a href="#">Sitemap</a>
+            <a href="#">Bying on Fiverr</a>
           </li>
         </ul>
         <ul>
           <li>
-            <a href="#">Graphics & Design</a>
+            Community
           </li>
           <li>
-            <a href="#">Digital Marketing</a>
+            <a href="#">Events</a>
           </li>
           <li>
-            <a href="#">Writing & Translation</a>
+            <a href="#">Blog</a>
           </li>
           <li>
-            <a href="#">Video & Animations</a>
+            <a href="#">Forum</a>
           </li>
           <li>
-            <a href="#">Music & Audio</a>
+            <a href="#">Community Standards</a>
           </li>
           <li>
-            <a href="#">Programming & Tech</a>
+            <a href="#">Podcast</a>
           </li>
           <li>
-            <a href="#">Data</a>
+            <a href="#">Affiliates</a>
           </li>
           <li>
-            <a href="#">Business</a>
+            <a href="#">Invite a Friend</a>
           </li>
           <li>
-            <a href="#">Lifestyle</a>
+            <a href="#">Become a Seller</a>
           </li>
-          <li>
-            <a href="#">Sitemap</a>
-          </li>
+          
         </ul>
         <ul>
           <li>
-            <a href="#">Graphics & Design</a>
+            More From Fiverr
           </li>
           <li>
-            <a href="#">Digital Marketing</a>
+            <a href="#">Fiverr Business</a>
           </li>
           <li>
-            <a href="#">Writing & Translation</a>
+            <a href="#">Fiverr Pro</a>
           </li>
           <li>
-            <a href="#">Video & Animations</a>
+            <a href="#">Fiverr Studio</a>
           </li>
           <li>
-            <a href="#">Music & Audio</a>
+            <a href="#">Fiver Logo Maker</a>
           </li>
           <li>
-            <a href="#">Programming & Tech</a>
+            <a href="#">Fiverr Guides</a>
           </li>
           <li>
-            <a href="#">Data</a>
+            <a href="#">Get Inspired</a>
           </li>
           <li>
-            <a href="#">Business</a>
+            <a href="#">ClearVoice <p>Content Marketing</p></a>
           </li>
           <li>
-            <a href="#">Lifestyle</a>
+            <a href="#">Fiverr Workspace <p>Invoice Software</p></a>
           </li>
           <li>
-            <a href="#">Sitemap</a>
+            <a href="#">Learn <p>Online Courses</p></a>
+          </li>
+          <li>
+            <a href="#">Working Not Working</a>
           </li>
         </ul>
       </div>
-      <hr className="container" />
-      <div className="footer">
+      <div className="footer-contact">
         <div className="container">
           <div className="footer__content d-flex justify-content-between">
             <div className="cpright__left">
               <p>
-                Copyright © 2021
-                <span>DexignZone </span>. All rights reserved.
+                <span>Fiverr</span> © Fiverr International Ltd. 2022
               </p>
             </div>
             <div className="cpright__right">
-              <a href="#">
-                <i className="fab fa-facebook-f" />
-              </a>
-              <a href="#">
-                <i className="fab fa-instagram" />
-              </a>
-              <a href="#">
-                <i className="fab fa-twitter" />
-              </a>
+              <div>
+                <a href="#">
+                  <i className="fa-brands fa-twitter" />
+                </a>
+                <a href="#">
+                  <i className="fa-brands fa-facebook" />
+                </a>
+                <a href="#">
+                  <i className="fa-brands fa-linkedin" />
+                </a>
+                <a href="#">
+                  <i className="fa-brands fa-pinterest-p" />
+                </a>
+                <a href="#">
+                  <i className="fa-brands fa-square-instagram" />
+                </a>
+                <button> 
+                  <i className="fa-sharp fa-solid fa-globe"></i>
+                  English
+                </button>
+                <button>US$ USD</button>
+                <i className="fa-sharp fa-solid fa-person last-child" />
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }

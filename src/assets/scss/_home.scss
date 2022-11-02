@@ -36,7 +36,6 @@ div {
                     border-color: #1dbf73;
                   }
                 }
-                
               }
             }
           }
@@ -85,12 +84,12 @@ div {
                 background-color: #1dbf73;
                 color: white;
                 &:hover {
-                    background-color: #198754;
+                  background-color: #198754;
                 }
               }
             }
             p {
-                margin-top: 20px;
+              margin-top: 20px;
               span {
                 font-size: 14px;
                 font-weight: 600;
@@ -101,11 +100,10 @@ div {
                 cursor: pointer;
                 transition: all 0.2s linear;
                 &:hover {
-                    background-color: white;
-                    color: #212529;
+                  background-color: white;
+                  color: #212529;
                 }
               }
-              
             }
           }
         }
@@ -123,23 +121,73 @@ div {
       }
     }
     .services {
+      margin-top: 96px;
       .container {
         max-width: calc(1320px + 36px);
-        .slick-next{
-          right: 0;
+        .slick-next {
+          right: -8px;
+          width: 48px;
+          height: 48px;
+          background-color: white;
+          border-radius: 50%;
+          box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 5px 0px;
+          &::before {
+            content: "";
+            display: inline-block;
+            background: url(https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/arrows.a8b0bad.svg) no-repeat;
+            background-size: 16px 64px;
+            width: 16px;
+            height: 16px;
+            margin-top: 2px;
+            background-position: 0 -48px;
+            
+          }
         }
-        .slick-prev{
-          left: 0;
+        .slick-prev {
+          left: -8px;
           z-index: 1;
+          width: 48px;
+          height: 48px;
+          background-color: white;
+          border-radius: 50%;
+          box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 5px 0px;
+          &::before {
+            content: "";
+            display: inline-block;
+            background: url(https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/arrows.a8b0bad.svg) no-repeat;
+            background-size: 16px 64px;
+            width: 16px;
+            height: 16px;
+            margin-top: 2px;
+            background-position: 0 -32px;
+          }
         }
 
         h3 {
           padding-left: 18px;
+          padding-bottom: 24px;
+          font-size: 32px;
+          font-weight: 600;
+          color: #404145;
         }
 
         div {
           .slider-genaral {
-            padding:0 18px;
+            padding: 0 18px;
+            .service-item{
+              position: relative;
+              h4 {
+                font-weight: 600;
+                color: white;
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 16px;
+                small {
+                  font-size: 14px;
+                }
+              }
+            }
           }
         }
       }

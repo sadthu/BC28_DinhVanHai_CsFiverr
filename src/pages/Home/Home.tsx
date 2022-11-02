@@ -123,52 +123,62 @@ export default function Home({ }: Props) {
             <h3>Popular professional services</h3>
             <Slider {...Settings}>
               <div className='slider-genaral'>
-                <div>
+                <div className='service-item'>
+                  <h4><small>Engage your audience</small> <br/> Video Explainer</h4>
                   <img src={imgAnimate} alt="" className='w-100 h-100' />
                 </div>
               </div>
               <div className='slider-genaral'>
-                <div>
+                <div className='service-item'>
+                  <h4><small>Showcase your story</small> <br/> Book Covers </h4>
                   <img src={imgBook} alt="" className='w-100' />
                 </div>
               </div>
               <div className='slider-genaral'>
-                <div>
+                <div className='service-item'>
+                  <h4><small>Learn you business</small> <br/> Data Entry </h4>
                   <img src={imgDta} alt="" className='w-100' />
                 </div>
               </div>
               <div className='slider-genaral'>
-                <div>
+                <div className='service-item'>
+                  <h4><small>Color your dreams</small> <br/> Illustration </h4>
                   <img src={imgIlus} alt="" className='w-100' />
                 </div>
               </div>
               <div className='slider-genaral'>
-                <div>
+                <div className='service-item'>
+                  <h4><small>Build your brand</small> <br/> Logo Design </h4>
                   <img src={imgLogo} alt="" className='w-100' />
                 </div>
               </div>
               <div className='slider-genaral'>
-                <div>
+                <div className='service-item'>
+                  <h4><small>Unlock growth online</small> <br/> SEO </h4>
                   <img src={imgSeo} alt="" className='w-100' />
                 </div>
               </div>
               <div className='slider-genaral'>
-                <div>
+                <div className='service-item'>
+                  <h4><small>Read more custumers</small> <br/> Social Media </h4>
                   <img src={imgSocial} alt="" className='w-100' />
                 </div>
               </div>
               <div className='slider-genaral'>
-                <div>
+                <div className='service-item'>
+                  <h4><small>Go global</small> <br/> Translation </h4>
                   <img src={imgtrans} alt="" className='w-100' />
                 </div>
               </div>
               <div className='slider-genaral'>
-                <div>
+                <div className='service-item'>
+                  <h4><small>Share your message</small> <br/> Voice Over </h4>
                   <img src={imgVoice} alt="" className='w-100' />
                 </div>
               </div>
               <div className='slider-genaral'>
-                <div>
+                <div className='service-item'>
+                  <h4><small>Customize your size</small> <br/> WordPress </h4>
                   <img src={imgWordpress} alt="" className='w-100' />
                 </div>
               </div>

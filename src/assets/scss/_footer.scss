@@ -1,16 +1,118 @@
-@import '../scss/variables';
-div {
-    .container {
-        ul {
-            list-style: none;
-            padding: 0;
+@import "../scss/variables";
+footer {
+  border-top: 1px solid #e4e5e7;
+  margin-top: 50px;
+  .footer-list {
+    padding-top: 64px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #e4e5e7;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        padding-bottom: 16px;
+        a {
+          color: #74767e;
+          font-weight: 500;
+          p {
             margin: 0;
-            li {
-                a {
-                    text-decoration: none;
-                    color: $gray500;
-                }
-            }
+            color: #b5b6ba;
+            font-size: 14px;
+          }
         }
+        &:first-child {
+          padding-bottom: 25px;
+          font-weight: 600;
+          color: #404145;
+          cursor: context-menu;
+        }
+
+        &:hover {
+          a {
+            text-decoration: underline;
+          }
+        }
+      }
     }
+  }
+  .footer-contact {
+    padding: 20px 0 30px 0;
+    .container {
+      .footer__content {
+        .cpright__left {
+          line-height: 1.4;
+          p {
+            margin-bottom: 0;
+            color: #b5b6ba;
+            font-size: 14px;
+            font-weight: 500;
+            span {
+              margin-right: 10px;
+              font-weight: 700;
+              color: #74767e;
+              font-size: 25px;
+            }
+          }
+        }
+        .cpright__right {
+          div {
+            display: flex;
+            gap: 20px;
+            i {
+              line-height: 1;
+              color: #74767e;
+              font-size: 20px;
+            }
+
+            a {
+              line-height: 2.5;
+              width: 35px;
+              height: 35px;
+              border-radius: 50%;
+              text-align: center;
+              transition: all 0.1s linear;
+              &:hover {
+                background-color: #f5f5f5;
+              }
+            }
+
+            button {
+              border: none;
+              background-color: white;
+              font-size: 14px;
+              font-weight: 600;
+              color: #74767e;
+              border-radius: 50px;
+              padding: 0 15px;
+              transition: all 0.1s linear;
+              i {
+                margin-right: 5px;
+                font-size: 14px;
+              }
+              &:hover {
+                background-color: #f5f5f5;
+                color: #404145;
+              }
+            }
+            .last-child {
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+              border: 1px solid;
+              text-align: center;
+              line-height: 1.4;
+              cursor: pointer;
+              transition: all 0.1s linear;
+              &:hover {
+                border-color: white;
+                background-color: #f5f5f5;
+                color: #404145;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
