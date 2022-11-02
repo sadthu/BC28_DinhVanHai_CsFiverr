@@ -11,12 +11,48 @@ export default function Home({ }: Props) {
   const imgNetfix = require('../../assets/img/netfix.png')
   const imgPG = require('../../assets/img/p&g.png')
   const imgPP = require('../../assets/img/paypal.png')
+  const imgAnimate = require('../../assets/img/animated-explainer-2x.webp')
+  const imgBook = require('../../assets/img/book-covers-2x.webp')
+  const imgDta = require('../../assets/img/data-entry-2x.webp')
+  const imgIlus = require('../../assets/img/illustration-2x.webp')
+  const imgLogo = require('../../assets/img/logo-design.webp')
+  const imgSeo = require('../../assets/img/seo-2x.webp')
+  const imgSocial = require('../../assets/img/social-2x.webp')
+  const imgtrans = require('../../assets/img/translation-2x.webp')
+  const imgVoice = require('../../assets/img/voiceover-2x.webp')
+  const imgWordpress = require('../../assets/img/wordpress-2x.webp')
+
   const Settings = {
+    dots: false,
     infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    centerMode:true,
+    speed: 300,
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: false
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
   return (
     <div>
@@ -86,29 +122,55 @@ export default function Home({ }: Props) {
           <div className='container'>
             <h3>Popular professional services</h3>
             <Slider {...Settings}>
-              <div>
-                <h3>1</h3>
+              <div className='slider-genaral'>
+                <div>
+                  <img src={imgAnimate} alt="" className='w-100 h-100' />
+                </div>
               </div>
-              <div>
-                <h3>2</h3>
+              <div className='slider-genaral'>
+                <div>
+                  <img src={imgBook} alt="" className='w-100' />
+                </div>
               </div>
-              <div>
-                <h3>3</h3>
+              <div className='slider-genaral'>
+                <div>
+                  <img src={imgDta} alt="" className='w-100' />
+                </div>
               </div>
-              <div>
-                <h3>4</h3>
+              <div className='slider-genaral'>
+                <div>
+                  <img src={imgIlus} alt="" className='w-100' />
+                </div>
               </div>
-              <div>
-                <h3>5</h3>
+              <div className='slider-genaral'>
+                <div>
+                  <img src={imgLogo} alt="" className='w-100' />
+                </div>
               </div>
-              <div>
-                <h3>6</h3>
+              <div className='slider-genaral'>
+                <div>
+                  <img src={imgSeo} alt="" className='w-100' />
+                </div>
               </div>
-              <div>
-                <h3>7</h3>
+              <div className='slider-genaral'>
+                <div>
+                  <img src={imgSocial} alt="" className='w-100' />
+                </div>
               </div>
-              <div>
-                <h3>8</h3>
+              <div className='slider-genaral'>
+                <div>
+                  <img src={imgtrans} alt="" className='w-100' />
+                </div>
+              </div>
+              <div className='slider-genaral'>
+                <div>
+                  <img src={imgVoice} alt="" className='w-100' />
+                </div>
+              </div>
+              <div className='slider-genaral'>
+                <div>
+                  <img src={imgWordpress} alt="" className='w-100' />
+                </div>
               </div>
             </Slider>
           </div>

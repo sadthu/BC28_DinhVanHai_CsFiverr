@@ -124,11 +124,23 @@ div {
     }
     .services {
       .container {
+        max-width: calc(1320px + 36px);
         .slick-next{
           right: 0;
         }
         .slick-prev{
           left: 0;
+          z-index: 1;
+        }
+
+        h3 {
+          padding-left: 18px;
+        }
+
+        div {
+          .slider-genaral {
+            padding:0 18px;
+          }
         }
       }
     }
