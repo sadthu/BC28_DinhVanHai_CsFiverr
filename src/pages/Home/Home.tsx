@@ -251,12 +251,14 @@ export default function Home({ }: Props) {
             <Slider {...SettingTestimonial}>
               <div className='testimonial-item'>
                 <div className='img'>
-                  <img src={imgTes1} alt=""/>
+                  <img src={imgTes1} alt="" />
                 </div>
                 <div className='text'>
                   <p>
-                    <span>Tim and Dan Joo, Co-Founders</span> 
-                    <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/haerfest-logo-x2.03fa5c5.png" alt="" />
+                    Tim and Dan Joo, Co-Founders
+                    <span>
+                      <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/haerfest-logo-x2.03fa5c5.png" alt="" />
+                    </span>
                   </p>
                   <p>
                     "When you want to create a business bigger than yourself, you need a lot of help. That's what Fiverr does."
@@ -265,44 +267,97 @@ export default function Home({ }: Props) {
               </div>
               <div className='testimonial-item'>
                 <div className='img'>
-                  <img src={imgTes1} alt="" />
+                  <img src={imgTes4} alt="" />
                 </div>
                 <div className='text'>
                   <p>
-                    <span>Kay Kim, Co-Founder</span> rooted
+                    Kay Kim, Co-Founder
+                    <span>
+                      <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/rooted-logo-x2.321d79d.png" alt="" />
+                    </span>
+
                   </p>
                   <p>
-                    "it's extremely exciting that Fiverr has feelancers from all over the world - it broadens the talent pool. One of the best things about Fiverr is that while we're sleeping, someone's working"
+                    "It's extremely exciting that Fiverr has freelancers from all over the world — it broadens the talent pool. One of the best things about Fiverr is that while we're sleeping, someone's working."
                   </p>
                 </div>
               </div>
               <div className='testimonial-item'>
                 <div className='img'>
-                  <img src={imgTes1} alt="" />
+                  <img src={imgTes2} alt="" />
                 </div>
                 <div className='text'>
                   <p>
-                    <span>Kay Kim, Co-Founder</span> rooted
+                    Brighid Gannon (DNP, PMHNP-BC), Co-Founder
+                    <span>
+                      <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/lavender-logo-x2.89c5e2e.png" alt="" />
+                    </span>
                   </p>
                   <p>
-                    "it's extremely exciting that Fiverr has feelancers from all over the world - it broadens the talent pool. One of the best things about Fiverr is that while we're sleeping, someone's working"
+                    "We used Fiverr for SEO, our logo, website, copy, animated videos — literally everything. It was like working with a human right next to you versus being across the world."
                   </p>
                 </div>
               </div>
               <div className='testimonial-item'>
                 <div className='img'>
-                  <img src={imgTes1} alt="" />
+                  <img src={imgTes3} alt="" />
                 </div>
                 <div className='text'>
                   <p>
-                    <span>Kay Kim, Co-Founder</span> rooted
+                    Caitlin Tormey, Chief Commercial Officer
+                    <span>
+                      <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/naadam-logo-x2.0a3b198.png" alt="" />
+                    </span>
                   </p>
                   <p>
-                    "it's extremely exciting that Fiverr has feelancers from all over the world - it broadens the talent pool. One of the best things about Fiverr is that while we're sleeping, someone's working"
+                    "We've used Fiverr for Shopify web development, graphic design, and backend web development. Working with Fiverr makes my job a little easier every day."
                   </p>
                 </div>
               </div>
             </Slider>
+          </div>
+        </section>
+        <section className='marketplace'>
+          <div className='container'>
+            <h3>Explore the marketplace</h3>
+            <div className='marketplace-content'>
+              <a href="#">
+                <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/graphics-design.d32a2f8.svg" alt="" />
+                Graphics & Design
+              </a>
+              <a href="#">
+                <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/online-marketing.74e221b.svg" alt="" />
+                Digital Marketing
+              </a>
+              <a href="#">
+                <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/writing-translation.32ebe2e.svg" alt="" />
+                Writing & Translation
+              </a>
+              <a href="#">
+                <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/video-animation.f0d9d71.svg" alt="" />
+                Video & Animation
+              </a>
+              <a href="#">
+                <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/music-audio.320af20.svg" alt="" />
+                Music & Audio
+              </a>
+              <a href="#">
+                <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/programming.9362366.svg" alt="" />
+                Programming & Tech
+              </a>
+              <a href="#">
+                <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/business.bbdf319.svg" alt="" />
+                Business
+              </a>
+              <a href="#">
+                <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/lifestyle.745b575.svg" alt="" />
+                Lifestyle
+              </a>
+              <a href="#">
+                <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/data.718910f.svg" alt="" />
+                Data
+              </a>
+            </div>
           </div>
         </section>
       </div>

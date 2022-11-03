@@ -317,17 +317,17 @@ div {
               padding: 0 48px 0 64px;
               width: 60%;
               p {
+                font-size: 20px;
+                color: #74767e;
                 span {
-                  margin-right: 10px;
-                  padding-right: 14px;
-                  font-size: 20px;
-                  line-height: 1.6;
-                  position: relative;
-                  border-right: 1px solid #c5c6c9;
-                }
-                img {
-                  width: 153px;
-                  display: inline-block;
+                  margin-left: 14px;
+                  padding-left: 10px;
+                  border-left: 1px solid #c5c6c9;
+                  height: 36px;
+                  img {
+                    height: 36px;
+                    display: inline-block;
+                  }
                 }
                 &:last-child {
                   font-size: 26px;
@@ -336,6 +336,48 @@ div {
                   font-weight: 500;
                 }
               }
+            }
+          }
+        }
+      }
+    }
+    .marketplace {
+      .container {
+        h3 {
+          margin-bottom: 64px;
+          color: #404145;
+          font-size: 32px;
+          font-weight: 700;
+        }
+        .marketplace-content {
+          display: grid;
+          grid-template-columns: repeat(5 , auto);
+          a {
+            text-align: center;
+            color: #222325;
+            font-weight: 500;
+            margin-bottom: 50px;
+            position: relative;
+            img {
+              margin: 0 auto 15px;
+              width: 48px;
+              height: 48px;
+              display: block;
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              top: 45px;
+              right: 50%;
+              transition: all 0.2s linear;
+              transform: translateX(50%);
+              padding: 0 0 8px;
+              width: 48px;
+              border-bottom: 2px solid #c5c6c9;
+            }
+            &:hover::after {
+              border-color: #1dbf73;
+              width: 85px;
             }
           }
         }
