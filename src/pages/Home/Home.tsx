@@ -21,6 +21,7 @@ export default function Home({ }: Props) {
   const imgtrans = require('../../assets/img/translation-2x.webp')
   const imgVoice = require('../../assets/img/voiceover-2x.webp')
   const imgWordpress = require('../../assets/img/wordpress-2x.webp')
+  const imgSelling = require('../../assets/img/selling-proposition-still-1400-x1.webp')
 
   const Settings = {
     dots: false,
@@ -54,6 +55,16 @@ export default function Home({ }: Props) {
       }
     ]
   };
+
+  const changeHandle = () => {
+    let video = document.querySelector('video');
+    console.log(video);
+   
+    
+  }
+
+  // window.onload = changeHandle
+
   return (
     <div>
       <div>
@@ -124,67 +135,118 @@ export default function Home({ }: Props) {
             <Slider {...Settings}>
               <div className='slider-genaral'>
                 <div className='service-item'>
-                  <h4><small>Engage your audience</small> <br/> Video Explainer</h4>
+                  <h4><small>Engage your audience</small> <br /> Video Explainer</h4>
                   <img src={imgAnimate} alt="" className='w-100 h-100' />
                 </div>
               </div>
               <div className='slider-genaral'>
                 <div className='service-item'>
-                  <h4><small>Showcase your story</small> <br/> Book Covers </h4>
+                  <h4><small>Showcase your story</small> <br /> Book Covers </h4>
                   <img src={imgBook} alt="" className='w-100' />
                 </div>
               </div>
               <div className='slider-genaral'>
                 <div className='service-item'>
-                  <h4><small>Learn you business</small> <br/> Data Entry </h4>
+                  <h4><small>Learn you business</small> <br /> Data Entry </h4>
                   <img src={imgDta} alt="" className='w-100' />
                 </div>
               </div>
               <div className='slider-genaral'>
                 <div className='service-item'>
-                  <h4><small>Color your dreams</small> <br/> Illustration </h4>
+                  <h4><small>Color your dreams</small> <br /> Illustration </h4>
                   <img src={imgIlus} alt="" className='w-100' />
                 </div>
               </div>
               <div className='slider-genaral'>
                 <div className='service-item'>
-                  <h4><small>Build your brand</small> <br/> Logo Design </h4>
+                  <h4><small>Build your brand</small> <br /> Logo Design </h4>
                   <img src={imgLogo} alt="" className='w-100' />
                 </div>
               </div>
               <div className='slider-genaral'>
                 <div className='service-item'>
-                  <h4><small>Unlock growth online</small> <br/> SEO </h4>
+                  <h4><small>Unlock growth online</small> <br /> SEO </h4>
                   <img src={imgSeo} alt="" className='w-100' />
                 </div>
               </div>
               <div className='slider-genaral'>
                 <div className='service-item'>
-                  <h4><small>Read more custumers</small> <br/> Social Media </h4>
+                  <h4><small>Read more custumers</small> <br /> Social Media </h4>
                   <img src={imgSocial} alt="" className='w-100' />
                 </div>
               </div>
               <div className='slider-genaral'>
                 <div className='service-item'>
-                  <h4><small>Go global</small> <br/> Translation </h4>
+                  <h4><small>Go global</small> <br /> Translation </h4>
                   <img src={imgtrans} alt="" className='w-100' />
                 </div>
               </div>
               <div className='slider-genaral'>
                 <div className='service-item'>
-                  <h4><small>Share your message</small> <br/> Voice Over </h4>
+                  <h4><small>Share your message</small> <br /> Voice Over </h4>
                   <img src={imgVoice} alt="" className='w-100' />
                 </div>
               </div>
               <div className='slider-genaral'>
                 <div className='service-item'>
-                  <h4><small>Customize your size</small> <br/> WordPress </h4>
+                  <h4><small>Customize your size</small> <br /> WordPress </h4>
                   <img src={imgWordpress} alt="" className='w-100' />
                 </div>
               </div>
             </Slider>
           </div>
         </section>
+        <section className='introduce'>
+          <div className='container'>
+            <div className='row'>
+              <div className='col-6 introduce-text'>
+                <h3>A whole world of freelance talent at your fingertips</h3>
+                <div>
+                  <p>
+                    <i className="fa-regular fa-circle-check"></i>
+                    The best for every budget
+                  </p>
+                  <p>Find high-quality services at every price point. No hourly rates, just project-based pricing.</p>
+                </div>
+                <div>
+                  <p>
+                    <i className="fa-regular fa-circle-check"></i>
+                    The best for every budget
+                  </p>
+                  <p>Find high-quality services at every price point. No hourly rates, just project-based pricing.</p>
+                </div>
+                <div>
+                  <p>
+                    <i className="fa-regular fa-circle-check"></i>
+                    The best for every budget
+                  </p>
+                  <p>Find high-quality services at every price point. No hourly rates, just project-based pricing.</p>
+                </div>
+                <div>
+                  <p>
+                    <i className="fa-regular fa-circle-check"></i>
+                    The best for every budget
+                  </p>
+                  <p>Find high-quality services at every price point. No hourly rates, just project-based pricing.</p>
+                </div>
+
+              </div>
+              <div className='col-6 introduce-img'>
+                <img src={imgSelling} alt="" className='w-100' />
+                <button className='Btn-play' data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div className="modal fade" id="exampleModal" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true" onClick={changeHandle}>
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <video controls>
+              <source src="https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/vmvv3czyk2ifedefkau7" type="video/mp4" />
+            </video>
+          </div>
+        </div>
       </div>
       <Footer />
     </div>
