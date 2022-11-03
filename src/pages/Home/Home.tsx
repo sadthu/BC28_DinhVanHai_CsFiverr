@@ -22,8 +22,12 @@ export default function Home({ }: Props) {
   const imgVoice = require('../../assets/img/voiceover-2x.webp')
   const imgWordpress = require('../../assets/img/wordpress-2x.webp')
   const imgSelling = require('../../assets/img/selling-proposition-still-1400-x1.webp')
+  const imgTes1 = require('../../assets/img/testimonial-video-still-haerfest.webp')
+  const imgTes2 = require('../../assets/img/testimonial-video-still-lavender.webp')
+  const imgTes3 = require('../../assets/img/testimonial-video-still-naadam.webp')
+  const imgTes4 = require('../../assets/img/testimonial-video-still-rooted.webp')
 
-  const Settings = {
+  const settingServices = {
     dots: false,
     infinite: true,
     speed: 300,
@@ -56,14 +60,18 @@ export default function Home({ }: Props) {
     ]
   };
 
-  const changeHandle = () => {
-    let video = document.querySelector('video');
-    console.log(video);
-   
-    
+  const SettingTestimonial = {
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
   }
 
-  // window.onload = changeHandle
+  const changeHandle = () => {
+    let video = document.querySelector('video') as HTMLMediaElement
+    video.muted = true;
+  }
 
   return (
     <div>
@@ -132,7 +140,7 @@ export default function Home({ }: Props) {
         <section className='services'>
           <div className='container'>
             <h3>Popular professional services</h3>
-            <Slider {...Settings}>
+            <Slider {...settingServices}>
               <div className='slider-genaral'>
                 <div className='service-item'>
                   <h4><small>Engage your audience</small> <br /> Video Explainer</h4>
@@ -236,6 +244,65 @@ export default function Home({ }: Props) {
                 <button className='Btn-play' data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
               </div>
             </div>
+          </div>
+        </section>
+        <section className='testimonial'>
+          <div className='container'>
+            <Slider {...SettingTestimonial}>
+              <div className='testimonial-item'>
+                <div className='img'>
+                  <img src={imgTes1} alt=""/>
+                </div>
+                <div className='text'>
+                  <p>
+                    <span>Tim and Dan Joo, Co-Founders</span> 
+                    <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/haerfest-logo-x2.03fa5c5.png" alt="" />
+                  </p>
+                  <p>
+                    "When you want to create a business bigger than yourself, you need a lot of help. That's what Fiverr does."
+                  </p>
+                </div>
+              </div>
+              <div className='testimonial-item'>
+                <div className='img'>
+                  <img src={imgTes1} alt="" />
+                </div>
+                <div className='text'>
+                  <p>
+                    <span>Kay Kim, Co-Founder</span> rooted
+                  </p>
+                  <p>
+                    "it's extremely exciting that Fiverr has feelancers from all over the world - it broadens the talent pool. One of the best things about Fiverr is that while we're sleeping, someone's working"
+                  </p>
+                </div>
+              </div>
+              <div className='testimonial-item'>
+                <div className='img'>
+                  <img src={imgTes1} alt="" />
+                </div>
+                <div className='text'>
+                  <p>
+                    <span>Kay Kim, Co-Founder</span> rooted
+                  </p>
+                  <p>
+                    "it's extremely exciting that Fiverr has feelancers from all over the world - it broadens the talent pool. One of the best things about Fiverr is that while we're sleeping, someone's working"
+                  </p>
+                </div>
+              </div>
+              <div className='testimonial-item'>
+                <div className='img'>
+                  <img src={imgTes1} alt="" />
+                </div>
+                <div className='text'>
+                  <p>
+                    <span>Kay Kim, Co-Founder</span> rooted
+                  </p>
+                  <p>
+                    "it's extremely exciting that Fiverr has feelancers from all over the world - it broadens the talent pool. One of the best things about Fiverr is that while we're sleeping, someone's working"
+                  </p>
+                </div>
+              </div>
+            </Slider>
           </div>
         </section>
       </div>
