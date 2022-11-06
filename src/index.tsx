@@ -8,7 +8,6 @@ import { Route, Router, unstable_HistoryRouter as HistoryRouter,Routes,Navigate 
 import Home from './pages/Home/Home';
 import ListJod from './pages/ListJod/ListJod';
 import JodDetail from './pages/JodDetail/JodDetail';
-import Login from './pages/Join/Join';
 import Register from './pages/Register/Register';
 import UserDetail from './pages/UserDetail/UserDetail';
 import TypeJod from './pages/TypeJod/TypeJod';
