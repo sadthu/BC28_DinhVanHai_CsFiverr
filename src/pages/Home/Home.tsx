@@ -120,7 +120,10 @@ export default function Home({ }: Props) {
                   <button className="btn" type="submit">Search</button>
                 </form>
                 <p>
+                  <div>
                   Popular:
+                  </div>
+                  
                   <div>
                   <span>Website Design</span>
                   <span>WordPress</span>
