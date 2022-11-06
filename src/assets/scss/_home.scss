@@ -46,25 +46,23 @@ div {
             color: white;
             #carouselExampleControls {
                 .carousel-inner {
+                    .carousel-item {
+                        height: calc(80vh - 95px);
+                    }
                     .carousel-item:nth-child(1) {
                         background: url(../img/img1.webp) center / cover no-repeat;
-                        height: calc(80vh - 95px);
                     }
                     .carousel-item:nth-child(2) {
                         background: url(../img/img2.webp) center / cover no-repeat;
-                        height: calc(80vh - 95px);
                     }
                     .carousel-item:nth-child(3) {
                         background: url(../img/img3.webp) center / cover no-repeat;
-                        height: calc(80vh - 95px);
                     }
                     .carousel-item:nth-child(4) {
                         background: url(../img/img4.webp) center / cover no-repeat;
-                        height: calc(80vh - 95px);
                     }
                     .carousel-item:nth-child(5) {
                         background: url(../img/img5.webp) center / cover no-repeat;
-                        height: calc(80vh - 95px);
                     }
                 }
             }
@@ -389,6 +387,23 @@ div {
                 margin: auto;
                 video {
                     width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1380px) {
+    div {
+        div {
+            .carousell {
+                height: 100vh;
+                #carouselExampleControls {
+                    .carousel-inner {
+                        .carousel-item {
+                            height: 100vh;
+                        }
+                    }
                 }
             }
         }
