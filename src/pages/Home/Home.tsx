@@ -3,6 +3,7 @@ import Slider from 'react-slick'
 import Footer from '../../components/Footer'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { NavLink } from 'react-router-dom';
 
 type Props = {}
 export default function Home({ }: Props) {
@@ -91,10 +92,10 @@ export default function Home({ }: Props) {
                   <a className=" text-white genaral" href="#">Become a Seller</a>
                 </li>
                 <li className="nav-item">
-                  <a className=" text-white genaral" href="#">Sign in</a>
+                  <NavLink className=" text-white genaral" to="/login" aria-current="page">Sign in</NavLink>
                 </li>
                 <li className="nav-item">
-                  <a className=" text-white rounded" href="#">Join</a>
+                  <NavLink className=" text-white rounded" to="/join" aria-current="page">Join</NavLink>
                 </li>
               </ul>
             </div>
