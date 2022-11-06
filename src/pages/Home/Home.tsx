@@ -92,10 +92,10 @@ export default function Home({ }: Props) {
                   <a className=" text-white genaral" href="#">Become a Seller</a>
                 </li>
                 <li className="nav-item">
-                  <NavLink className=" text-white genaral" to="/login" aria-current="page">Sign in</NavLink>
+                  <NavLink className=" text-white genaral" to="/singin">Sign in</NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink className=" text-white rounded" to="/join" aria-current="page">Join</NavLink>
+                  <NavLink className=" text-white rounded" to="/join">Join</NavLink>
                 </li>
               </ul>
             </div>
@@ -121,10 +121,12 @@ export default function Home({ }: Props) {
                 </form>
                 <p>
                   Popular:
+                  <div>
                   <span>Website Design</span>
                   <span>WordPress</span>
                   <span>Logo Design</span>
                   <span>Video Editting</span>
+                  </div>
                 </p>
               </div>
             </div>
