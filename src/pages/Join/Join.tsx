@@ -3,28 +3,49 @@ import { NavLink } from "react-router-dom";
 import Footer from "../../components/Footer";
 import FooterCpright from "../../components/FooterCpright";
 import Home from "../Home/Home";
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+import { useDispatch } from "react-redux";
+import { singinApi } from "../../redux/reducers/useReducer";
+import { AppDispatch } from "../../redux/configStore";
 
 type Props = {};
 
 export default function Join({}: Props) {
+  const dispatch:AppDispatch = useDispatch()
+  const formik = useFormik({
+    initialValues:{
+      email:'',
+      password:'',
+    },
+    validationSchema:Yup.object().shape({
+        email: Yup.string().required('Email không được bỏ trống !').email('Email không đúng định dạng!'),
+        password: Yup.string().required('Password không được bỏ trống !').min(3,'password từ 3 - 32 ký tự!').max(32,'password từ 3 đến 32 ký tự!'),
+    })
+    ,
+    onSubmit: (values)=>{
+      const action = singinApi(values);
+      dispatch(action);
+        
+    }
+  }); 
   return (
-    <div>
+    <div className='singin'>
       <div className="container">
-        <div className="register">
-          <div className="inputs">
-            <NavLink to="/home">
-              <img
-                src="data:image/png;base64,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"
-                alt=""
-              />
-            </NavLink>
-            <h2>Đăng nhập</h2>
-            <input type="text" placeholder="email" id="email" />
-            <input type="text" placeholder="password" id="password" />
+        <form onSubmit={formik.handleSubmit}>
+          <h3>ĐĂNG NHẬP</h3>
+          <label><b>Email</b></label><br />
+          <input type="text" placeholder="Email" name="email" onChange={formik.handleChange}  onBlur={formik.handleBlur}/><br />
+          <span>{formik.errors.email ? <p className='text text-danger'>{formik.errors.email}</p> : ''}</span>
+          <label><b>Mật Khẩu</b></label><br />
+          <input type="password" placeholder="Password" name="password" onChange={formik.handleChange} onBlur={formik.handleBlur} /><br />
+          <span>{formik.errors.password ? <p className='text text-danger'>{formik.errors.password}</p> : ''}</span>
+          <div className="clearfix1 general ">
+            <button type="submit" >Đăng Nhập</button>
           </div>
-        </div>
+        </form>
       </div>
-      <FooterCpright />
+
     </div>
   );
 }

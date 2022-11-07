@@ -81,10 +81,6 @@ export default function Home({ }: Props) {
           <nav className="navbar navbar-expand-sm navbar-light justify-content-between container">
             <div className='d-flex logo'>
               <a className="navbar-brand text-white fw-bolder fs-3" href="#">Fiverr</a>
-              <form className=" my-2">
-                <input className="form-control" type="text" placeholder="Search"></input>
-                <button className="btn btn-outline-success" type="submit">Search</button>
-              </form>
             </div>
             <div className='form'>
               <ul className="navbar-nav me-auto mt-2 mt-lg-0">
