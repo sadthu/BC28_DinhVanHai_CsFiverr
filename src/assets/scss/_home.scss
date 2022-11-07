@@ -5,10 +5,8 @@ div {
             z-index: 10;
             nav {
                 .logo {
-                    a {}
                     form {
                         display: flex;
-                        .form-control {}
                         button {
                             margin-left: 5px;
                             background-color: #1dbf73;
@@ -73,7 +71,6 @@ div {
                 .container {
                     div {
                         form {
-                            .form-control {}
                             button {
                                 margin-left: 5px;
                                 background-color: #1dbf73;
@@ -120,7 +117,6 @@ div {
             span {
                 line-height: 4;
             }
-            img {}
         }
         .services {
             margin: 96px 0;
@@ -229,7 +225,6 @@ div {
                                 margin-bottom: 0;
                             }
                         }
-                        img {}
                     }
                     .introduce-text {
                         padding-right: 10%;
@@ -395,19 +390,19 @@ div {
     }
 }
 
-@media (max-width: 1380px) {
-    div {
-        div {
-            .carousell {
-                height: 100vh;
-                #carouselExampleControls {
-                    .carousel-inner {
-                        .carousel-item {
-                            height: 100vh;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+// @media (max-width: 1380px) {
+//     div {
+//         div {
+//             .carousell {
+//                 height: 100vh;
+//                 #carouselExampleControls {
+//                     .carousel-inner {
+//                         .carousel-item {
+//                             height: 100vh;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }

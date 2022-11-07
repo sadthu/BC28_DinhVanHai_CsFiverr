@@ -1,8 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit'
+import ListjodReducer from './reducers/ListjodReducer'
 
 export const store = configureStore({
   reducer: {
-    
+    listjodreduces:ListjodReducer
   },
 })
 

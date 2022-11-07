@@ -57,7 +57,7 @@ const TOKEN_CYBERSOFT = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZW5Mb3AiOiJCb2
 //Cấu hình interceptor (Cấu hình cho các request và response)
 
 export const http = axios.create({
-    baseURL:`https://shop.cyberlearn.vn/api`,
+    baseURL:`https://fiverrnew.cybersoft.edu.vn/api`,
     timeout: 6000
 });
 
@@ -94,18 +94,14 @@ http.interceptors.response.use((response) => {
     console.log(response);
     return response;
 }, err => {
-    // const originalRequest = error.config;
     console.log(err.response.status);
     if(err.response.status === 400 || err.response.status === 404) {
-        // history.push('/');
         window.location.href = '/';
         return  Promise.reject(err);
     }
     if(err.response.status === 401 || err.response.status === 403) {
         alert('Token không hợp lệ ! Vui lòng đăng nhập lại !');
-        // history.push('/login');
         window.location.href = '/login';
-
         return Promise.reject(err)
     }
 })
