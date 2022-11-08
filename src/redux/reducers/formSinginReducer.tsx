@@ -2,6 +2,7 @@ import { createSlice,PayloadAction } from '@reduxjs/toolkit'
 import { Action } from '@remix-run/router';
 import { http } from '../../util/Setting';
 import { AppDispatch } from '../configStore';
+import {history} from '../../index'
 
 export interface userInfor {
     name:          string;
@@ -35,9 +36,11 @@ export const singupApi = (userInfor:userInfor) => {
             const result = await http.post('/auth/signup',userInfor);
             const acction = setUserInfor(result.data.content);
             dispatch(acction);
+            history.push('/join')
         }
         catch (err) {
             console.log(err)
+            alert('Đã tồn tại tài khoản!')
         }
     }
 }

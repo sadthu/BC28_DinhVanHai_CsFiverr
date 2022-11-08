@@ -4,6 +4,8 @@ import Footer from '../../components/Footer'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { NavLink } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import {ACCESS_TOKEN, clearCookie, clearLocalStorage, USER_LOGIN} from '../../util/Setting'
 
 type Props = {}
 export default function Home({ }: Props) {
@@ -27,6 +29,32 @@ export default function Home({ }: Props) {
   const imgTes2 = require('../../assets/img/testimonial-video-still-lavender.webp')
   const imgTes3 = require('../../assets/img/testimonial-video-still-naadam.webp')
   const imgTes4 = require('../../assets/img/testimonial-video-still-rooted.webp')
+
+  const  {userLogin} = useSelector((state:any) => state.userReduce);
+  console.log(userLogin)
+  const renderNavlink = () => {
+    if (userLogin) {
+      return <>
+        <li>
+          <NavLink className="text-white rounded" to="/">
+            {userLogin.user.name}
+          </NavLink>
+        </li>
+        <li>
+          <a href="#" className="text-white rounded" style={{cursor: 'pointer'}} onClick={() => {
+            clearLocalStorage(USER_LOGIN);
+            clearLocalStorage(ACCESS_TOKEN);
+            clearCookie(ACCESS_TOKEN);
+            //f5 trang
+            window.location.href = '/';
+          }}>Đăng xuất</a>
+        </li>
+      </>
+    }
+    return <li className="nav-item">
+      <NavLink className=" text-white rounded" to="/join">Join</NavLink>
+    </li>
+  }
 
   const settingServices = {
     dots: false,
@@ -90,9 +118,7 @@ export default function Home({ }: Props) {
                 <li className="nav-item">
                   <NavLink className=" text-white genaral" to="/singin">Sign in</NavLink>
                 </li>
-                <li className="nav-item">
-                  <NavLink className=" text-white rounded" to="/join">Join</NavLink>
-                </li>
+                {renderNavlink()}
               </ul>
             </div>
           </nav>
@@ -117,14 +143,14 @@ export default function Home({ }: Props) {
                 </form>
                 <p>
                   <div>
-                  Popular:
+                    Popular:
                   </div>
-                  
+
                   <div>
-                  <span>Website Design</span>
-                  <span>WordPress</span>
-                  <span>Logo Design</span>
-                  <span>Video Editting</span>
+                    <span>Website Design</span>
+                    <span>WordPress</span>
+                    <span>Logo Design</span>
+                    <span>Video Editting</span>
                   </div>
                 </p>
               </div>

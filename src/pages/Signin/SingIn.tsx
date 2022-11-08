@@ -12,16 +12,11 @@ export default function SingIn({ }: Props) {
   const dispatch: AppDispatch = useDispatch()
   const formik = useFormik({
     initialValues: {
-      // id: 0,
       email: '',
       password: '',
       birthday: '',
       name: '',
       phone: '',
-      // gender:'',
-      // role: '',
-      // skill: '',
-      // certification: '',
     },
     validationSchema: Yup.object().shape({
       email: Yup.string().required('Email không được bỏ trống !').email('Email không đúng định dạng!'),

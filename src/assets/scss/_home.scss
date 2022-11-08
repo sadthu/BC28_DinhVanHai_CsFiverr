@@ -2,22 +2,16 @@ div {
     div {
         header {
             position: fixed;
-            z-index: 10;
+            z-index: 30;
             nav {
                 .logo {
-                    form {
-                        display: flex;
-                        button {
-                            margin-left: 5px;
-                            background-color: #1dbf73;
-                            color: white;
-                        }
-                    }
+                    display: flex;
                 }
                 .form {
                     ul {
                         li {
                             padding-left: 30px;
+                            font-weight: 600;
                             .genaral:hover {
                                 opacity: 0.8;
                             }

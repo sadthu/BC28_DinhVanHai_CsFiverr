@@ -1,6 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { ACCESS_TOKEN, getStoreJSON, http, setCookie, setStore, setStoreJSON, USER_LOGIN } from '../../util/Setting';
 import { AppDispatch } from '../configStore';
+import {history} from '../../index'
 
 export interface accUser {
     email: string;
@@ -35,10 +36,12 @@ export const singinApi = (userLogin: accUser) => {
             const acction = setUserLogin(result.data.content);
             dispatch(acction);
             console.log(result.data.content)
+            history.push('/home')
         }
         catch (err) {
             console.log(err)
             alert('sai thông tin!')
+            history.push('/singin')
         }
     }
 }
