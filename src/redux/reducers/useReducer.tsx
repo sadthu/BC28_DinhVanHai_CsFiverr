@@ -7,11 +7,7 @@ export interface accUser {
     password: string;
 };
 
-export interface useState {
-    userLogin: accUser
-}
-
-const initialState:useState = {
+const initialState = {
     userLogin: getStoreJSON(USER_LOGIN)
 };
 
@@ -33,14 +29,16 @@ export const singinApi = (userLogin: accUser) => {
     return async (dispatch: AppDispatch) => {
         try {
             let result = await http.post('/auth/signin', userLogin);
-            setStore(ACCESS_TOKEN, result.data.content.accessToken);
-            setCookie(result.data.content.accessToken, 30, ACCESS_TOKEN);
+            setStore(ACCESS_TOKEN, result.data.content.token);
+            setCookie(result.data.content.token, 30, ACCESS_TOKEN);
             setStoreJSON(USER_LOGIN, result.data.content)
             const acction = setUserLogin(result.data.content);
             dispatch(acction);
+            console.log(result.data.content)
         }
         catch (err) {
             console.log(err)
+            alert('sai thông tin!')
         }
     }
 }
