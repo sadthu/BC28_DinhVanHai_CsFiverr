@@ -1,8 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import Footer from "../../components/Footer";
-import FooterCpright from "../../components/FooterCpright";
-import Home from "../Home/Home";
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useDispatch } from "react-redux";

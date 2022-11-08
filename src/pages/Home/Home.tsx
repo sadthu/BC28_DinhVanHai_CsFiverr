@@ -36,7 +36,7 @@ export default function Home({ }: Props) {
     if (userLogin) {
       return <>
         <li>
-          <NavLink className="text-white rounded" to="/">
+          <NavLink className="text-white rounded" to="/homeTemplate/profile">
             {userLogin.user.name}
           </NavLink>
         </li>

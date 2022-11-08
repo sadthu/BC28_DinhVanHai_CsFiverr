@@ -101,7 +101,7 @@ http.interceptors.response.use((response) => {
     }
     if(err.response.status === 401 || err.response.status === 403) {
         alert('Token không hợp lệ ! Vui lòng đăng nhập lại !');
-        window.location.href = '/login';
+        window.location.href = '/join';
         return Promise.reject(err)
     }
 })

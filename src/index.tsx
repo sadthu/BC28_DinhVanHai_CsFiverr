@@ -15,6 +15,7 @@ import Admin from './pages/Admin/Admin';
 import './assets/scss/style.scss'
 import Join from './pages/Join/Join';
 import SingIn from './pages/Signin/SingIn';
+import Profile from './pages/Profile/Profile';
 export const history = createBrowserHistory();
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -31,10 +32,11 @@ root.render(
           <Route path='usedetail' element={<UserDetail/>}></Route>
           <Route path='typejod' element={<TypeJod/>}></Route>
           <Route path='admin' element={<Admin/>}></Route>
+          <Route path='profile' element={<Profile/>}></Route>
         </Route>
         <Route path='join' element={<Join/>}></Route>
         <Route path='singin' element={<SingIn/>}></Route>
-        <Route path='*' element={<Navigate to=''/>}></Route>
+        <Route path='*' element={<Navigate to='/'/>}></Route>
       </Routes>
     </HistoryRouter>
   </Provider>

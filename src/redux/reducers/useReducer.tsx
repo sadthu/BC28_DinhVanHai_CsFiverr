@@ -35,13 +35,30 @@ export const singinApi = (userLogin: accUser) => {
             setStoreJSON(USER_LOGIN, result.data.content)
             const acction = setUserLogin(result.data.content);
             dispatch(acction);
-            console.log(result.data.content)
+            console.log('userlogin',result.data.content)
             history.push('/home')
         }
         catch (err) {
             console.log(err)
             alert('sai thông tin!')
-            history.push('/singin')
+            // history.push('/singin')
+            window.location.href = '/join'
+        }
+    }
+}
+
+
+export const getProfileApi = () => {
+    return async (dispatch: AppDispatch) => {
+        try {
+            const result = await http.post('/users');
+            const acction = setUserLogin(result.data.content)
+            dispatch(acction)
+            
+        }catch(err){
+            alert('Đăng nhập để vào trang này !');
+            history.push('/join');
+            console.log({err})
         }
     }
 }

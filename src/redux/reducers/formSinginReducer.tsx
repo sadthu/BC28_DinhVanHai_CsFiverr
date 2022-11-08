@@ -41,6 +41,7 @@ export const singupApi = (userInfor:userInfor) => {
         catch (err) {
             console.log(err)
             alert('Đã tồn tại tài khoản!')
+            window.location.href = '/singin'
         }
     }
 }
