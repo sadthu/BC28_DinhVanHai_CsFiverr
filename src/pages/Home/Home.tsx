@@ -36,12 +36,12 @@ export default function Home({ }: Props) {
     if (userLogin) {
       return <>
         <li>
-          <NavLink className="text-white rounded" to="/homeTemplate/profile">
+          <NavLink className="rounded genaral" to="/homeTemplate/profile">
             {userLogin.user.name}
           </NavLink>
         </li>
         <li>
-          <a href="#" className="text-white rounded" style={{cursor: 'pointer'}} onClick={() => {
+          <a href="#" className="rounded" style={{cursor: 'pointer'}} onClick={() => {
             clearLocalStorage(USER_LOGIN);
             clearLocalStorage(ACCESS_TOKEN);
             clearCookie(ACCESS_TOKEN);
@@ -102,21 +102,33 @@ export default function Home({ }: Props) {
     video.muted = true;
   }
 
+  window.addEventListener("scroll", () => {
+    let headerr = document.querySelector("header") as HTMLElement;
+    
+    if (window.pageYOffset > 0) {
+      headerr.style.backgroundColor = '#1dbf73';
+    } else {
+      headerr.style.backgroundColor = '#ffffff00';
+    }
+    });
+    
+
+
   return (
     <div>
       <div>
         <header className='w-100'>
           <nav className="navbar navbar-expand-sm navbar-light justify-content-between container">
             <div className='d-flex logo'>
-              <a className="navbar-brand text-white fw-bolder fs-3" href="#">Fiverr</a>
+              <a className="fw-bolder fs-3" href="#">Fiverr</a>
             </div>
             <div className='form'>
               <ul className="navbar-nav me-auto mt-2 mt-lg-0">
                 <li className="nav-item">
-                  <a className=" text-white genaral" href="#">Become a Seller</a>
+                  <a className="genaral" href="#">Become a Seller</a>
                 </li>
                 <li className="nav-item">
-                  <NavLink className=" text-white genaral" to="/singin">Sign in</NavLink>
+                  <NavLink className="genaral" to="/singin">Sign in</NavLink>
                 </li>
                 {renderNavlink()}
               </ul>
@@ -136,7 +148,7 @@ export default function Home({ }: Props) {
           <div className='carousell__content w-100'>
             <div className='container'>
               <div className='w-50'>
-                <h2>Find the perfect freelance <br /> services for your business</h2>
+                <h2>Find the perfect <span> freelance </span><br /> services for your business</h2>
                 <form className="d-flex my-2">
                   <input className="form-control" type="text" placeholder="Search" />
                   <button className="btn" type="submit">Search</button>
