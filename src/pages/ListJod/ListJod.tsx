@@ -17,8 +17,8 @@ export default function ListJod({ }: Props) {
   }, [])
   return (
     <div>
-      <h3>
-        
+      <h3 className='m-5'>
+        list gi
       </h3>
     </div>
   )

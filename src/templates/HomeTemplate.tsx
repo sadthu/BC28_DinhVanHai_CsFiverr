@@ -9,7 +9,7 @@ export default function HomeTemplate({}: Props) {
   return (
     <div className='container'>
         <Header />
-            <Outlet />
+          <Outlet />
         <Footer />
     </div>
   )

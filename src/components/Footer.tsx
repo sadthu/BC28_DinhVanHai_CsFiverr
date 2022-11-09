@@ -5,7 +5,7 @@ type Props = {};
 export default function Footer({ }: Props) {
   return (
     <footer>
-      <div className="footer-list container d-flex justify-content-between">
+      <div className="footer-list container d-flex justify-content-between p-0">
         <ul>
           <li>
             Categorles
