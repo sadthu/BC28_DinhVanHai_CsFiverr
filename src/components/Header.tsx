@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import { NavLink, useNavigate } from 'react-router-dom';
+import React, { useEffect,useState } from 'react'
+import { NavLink, useNavigate, useSearchParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '../redux/configStore'
 import { ACCESS_TOKEN, clearCookie, clearLocalStorage, USER_LOGIN } from '../util/Setting'
@@ -34,21 +34,23 @@ export default function Header({ }: Props) {
       <NavLink className="rounded" to="/join">Join</NavLink>
     </li>
   };
+
   console.log({ arrMenuJod })
   useEffect(() => {
     const action = getMenuJodApi();
     dispatch(action)
   }, [])
   return (
-    <div className='header_template container'>
+    <div className='header_template'>
+      <div className=' container'>
       <div className='w-100 header_template-content'>
         <nav className="navbar navbar-expand-sm navbar-light justify-content-between">
           <div className='logo justify-content-between'>
             <a className="fw-bolder fs-3" href="#">Fiverr</a>
             <form className="d-flex my-2" onSubmit={(e) => {
               e.preventDefault();
-              const keyword = document.querySelector('#keyword') as HTMLInputElement;
-              navigate(`/hometemplate/listjod?keyword=${keyword.value}`)
+              const key = document.querySelector('#keyword') as HTMLInputElement;
+              navigate(`/hometemplate/listjod?keyword=${key.value}`)
             }}>
               <input id='keyword' className="" type="text" placeholder="Search" />
               <button className="" type="submit">Search</button>
@@ -77,6 +79,7 @@ export default function Header({ }: Props) {
           })}
           
         </ul>
+      </div>
       </div>
     </div>
   )

@@ -3,6 +3,9 @@
     z-index: 30;
     width: 100%;
     top: 0;
+    left: 0;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     .header_template-content {
         a {
             color: #74767e;
@@ -66,12 +69,19 @@
         border-top: 1px solid #74767e47;
         ul {
             padding-left: 0;
+            margin-bottom: 0;
             li {
                 list-style: none;
                 padding: 10px 10px;
                 a {
                     color: #74767e;
                     font-weight: 500;
+                    padding-bottom: 10px;
+                }
+                &:hover {
+                    a {
+                        border-bottom: 2px solid #1dbf73;
+                    }
                 }
                 &:first-child {
                     padding-left: 0;

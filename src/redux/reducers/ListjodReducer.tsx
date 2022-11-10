@@ -1,6 +1,4 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { http } from '../../util/Setting';
-import { AppDispatch } from '../configStore';
 
 export interface Typejod {
     id:                 number;
@@ -45,15 +43,15 @@ const ListjodReducer = createSlice({
 export const {getListjod} = ListjodReducer.actions
 export default ListjodReducer.reducer
 
-export const getJodApi = () => {
-    return async (dispatch:AppDispatch) => {
-        try {
-            const result = await http.get('/cong-viec/lay-danh-sach-cong-viec-theo-ten/design');
-            const acction = getListjod(result.data.content);
-            dispatch(acction);
-        }
-        catch(err) {
-            console.log(err)
-        }
-    }
-}
+// export const getJodApi = () => {
+//     return async (dispatch:AppDispatch) => {
+//         try {
+//             const result = await http.get('/cong-viec/lay-danh-sach-cong-viec-theo-ten/logo');
+//             const acction = getListjod(result.data.content);
+//             dispatch(acction);
+//         }
+//         catch(err) {
+//             console.log(err)
+//         }
+//     }
+// }
