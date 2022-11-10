@@ -1,11 +1,16 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react'
+import { NavLink, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { AppDispatch, RootState } from '../redux/configStore'
 import { ACCESS_TOKEN, clearCookie, clearLocalStorage, USER_LOGIN } from '../util/Setting'
+import { getMenuJodApi, TypeMenu } from '../redux/reducers/listMenuReducer';
 type Props = {}
 
 export default function Header({ }: Props) {
-  const { userLogin } = useSelector((state: any) => state.userReduce);
+  const navigate = useNavigate();
+  const dispatch: AppDispatch = useDispatch();
+  const { arrMenuJod } = useSelector((state: RootState) => state.listmenureducer);
+  const { userLogin } = useSelector((state: RootState) => state.userReduce);
   const renderNavlink = () => {
     if (userLogin) {
       return <>
@@ -28,15 +33,24 @@ export default function Header({ }: Props) {
     return <li className="nav-item">
       <NavLink className="rounded" to="/join">Join</NavLink>
     </li>
-  }
+  };
+  console.log({ arrMenuJod })
+  useEffect(() => {
+    const action = getMenuJodApi();
+    dispatch(action)
+  }, [])
   return (
     <div className='header_template container'>
       <div className='w-100 header_template-content'>
         <nav className="navbar navbar-expand-sm navbar-light justify-content-between">
           <div className='logo justify-content-between'>
             <a className="fw-bolder fs-3" href="#">Fiverr</a>
-            <form className="d-flex my-2">
-              <input className="" type="text" placeholder="Search" />
+            <form className="d-flex my-2" onSubmit={(e) => {
+              e.preventDefault();
+              const keyword = document.querySelector('#keyword') as HTMLInputElement;
+              navigate(`/hometemplate/listjod?keyword=${keyword.value}`)
+            }}>
+              <input id='keyword' className="" type="text" placeholder="Search" />
               <button className="" type="submit">Search</button>
             </form>
           </div>
@@ -53,6 +67,16 @@ export default function Header({ }: Props) {
             </ul>
           </div>
         </nav>
+      </div>
+      <div className='listjodmenu'>
+        <ul className='d-flex justify-content-between'>
+          {arrMenuJod.map((item: TypeMenu, index: number) => {
+            return <li key={index}>
+              <a href="#">{item.tenLoaiCongViec}</a>
+            </li>
+          })}
+          
+        </ul>
       </div>
     </div>
   )

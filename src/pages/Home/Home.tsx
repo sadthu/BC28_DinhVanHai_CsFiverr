@@ -3,9 +3,10 @@ import Slider from 'react-slick'
 import Footer from '../../components/Footer'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import {ACCESS_TOKEN, clearCookie, clearLocalStorage, USER_LOGIN} from '../../util/Setting'
+import { RootState } from '../../redux/configStore';
 
 type Props = {}
 export default function Home({ }: Props) {
@@ -30,7 +31,9 @@ export default function Home({ }: Props) {
   const imgTes3 = require('../../assets/img/testimonial-video-still-naadam.webp')
   const imgTes4 = require('../../assets/img/testimonial-video-still-rooted.webp')
 
-  const  {userLogin} = useSelector((state:any) => state.userReduce);
+  const navigate = useNavigate()
+
+  const  {userLogin} = useSelector((state:RootState) => state.userReduce);
   console.log(userLogin)
   const renderNavlink = () => {
     if (userLogin) {
@@ -149,8 +152,12 @@ export default function Home({ }: Props) {
             <div className='container'>
               <div className='w-50'>
                 <h2>Find the perfect <span> freelance </span><br /> services for your business</h2>
-                <form className="d-flex my-2">
-                  <input className="form-control" type="text" placeholder="Search" />
+                <form className="d-flex my-2" onSubmit={(e) => {
+                  e.preventDefault();
+                  const keyword = document.querySelector('#keyword') as HTMLInputElement;
+                  navigate(`/hometemplate/listjod?keyword=${keyword.value}`)
+                }}>
+                  <input id='keyword' className="form-control" type="text" placeholder="Search" />
                   <button className="btn" type="submit">Search</button>
                 </form>
                 <p>
