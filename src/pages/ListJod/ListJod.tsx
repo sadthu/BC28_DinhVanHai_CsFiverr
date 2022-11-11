@@ -14,7 +14,7 @@ export default function ListJod({ }: Props) {
   console.log('arjod', arrJod)
   const dispatch: AppDispatch = useDispatch()
 
-  const getProductByKeywordApi = async () => {
+  const getJodByKeywordApi = async () => {
     try {
       if (searchParams.get('keyword') !== null) {
         const result = await http.get(`/cong-viec/lay-danh-sach-cong-viec-theo-ten/${searchParams.get('keyword')}`);
@@ -33,7 +33,7 @@ export default function ListJod({ }: Props) {
   useEffect(() => {
     // const action = getJodApi();
     // dispatch(action);
-    getProductByKeywordApi()
+    getJodByKeywordApi()
 
   }, [searchParams.get('keyword')])
 
@@ -98,34 +98,6 @@ export default function ListJod({ }: Props) {
             </div>
           })}
 
-          {/* <div className='col-3 '>
-            <div className='listjod_wrap-item'>
-              <div className='img'>
-                <img src='https://fiverrnew.cybersoft.edu.vn/images/cv1.jpg' alt="" />
-              </div>
-              <div className='text'>
-                <div className='user d-flex'>
-                  <img src="http://sc04.alicdn.com/kf/Hc3e61591078043e09dba7808a6be5d21n.jpg" alt="" />
-                  <div className='user_text'>
-                    <a href="#">sfsfsf</a>
-                    <p>lv2 seller</p>
-                  </div>
-                </div>
-                <a href="#">I will design the best app screenshots for app store play store</a>
-                <div className='vote'>
-                  <i className="fa-solid fa-star"></i> 5.0 <span>(345)</span>
-                </div>
-              </div>
-              <div className='price d-flex'>
-                <div className='like'>
-                  <i className="fa-solid fa-heart"></i>
-                </div>
-                <div className='buy'>
-                  staring at <span>$15</span>
-                </div>
-              </div>
-            </div>
-          </div> */}
         </div>
       </div>
     </div>

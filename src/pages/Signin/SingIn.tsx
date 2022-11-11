@@ -21,8 +21,8 @@ export default function SingIn({ }: Props) {
     validationSchema: Yup.object().shape({
       email: Yup.string().required('Email không được bỏ trống !').email('Email không đúng định dạng!'),
       password: Yup.string().required('Password không được bỏ trống !').min(3, 'password từ 3 - 32 ký tự!').max(32, 'password từ 3 đến 32 ký tự!'),
-      birthday: Yup.string().required('Không được bỏ trống !').min(3, 'password từ 3 - 32 ký tự!').max(32, 'password từ 3 đến 32 ký tự!'),
-      name: Yup.string().required('Accout không được bỏ trống !'),
+      birthday: Yup.string().required('Không được bỏ trống !'),
+      name: Yup.string().required('Accout không được bỏ trống !').max(12, 'Name không vượt quá 12 ký tự!'),
       phone: Yup.string().required('Phone không được bỏ trống !')
     })
     ,

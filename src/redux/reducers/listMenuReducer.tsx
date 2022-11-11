@@ -5,7 +5,7 @@ import { http } from '../../util/Setting';
 export interface TypeMenu {
     id:                 number;
     tenLoaiCongViec:  string;
-    dsNhomChiTietLoai:ArrGrDetail;
+    dsNhomChiTietLoai:ArrGrDetail[];
 }
 
 export interface ArrGrDetail {
@@ -13,7 +13,7 @@ export interface ArrGrDetail {
     tenNhom:string;
     hinhAnh:string;
     maLoaiCongviec:number;
-    dsChiTietLoai:ArrDetail
+    dsChiTietLoai:ArrDetail[];
 }
 
 export interface ArrDetail {

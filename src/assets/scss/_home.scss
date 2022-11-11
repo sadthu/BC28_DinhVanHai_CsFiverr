@@ -32,8 +32,9 @@ div {
                                     transition: all 0.2s linear;
                                     border: 1px solid white;
                                     &:hover {
-                                        background-color: #1dbf73;
-                                        border-color: #1dbf73;
+                                        background-color: #148550;
+                                        // border-color: #1dbf73;
+                                        color: white;
                                     }
                                 }
                             }
