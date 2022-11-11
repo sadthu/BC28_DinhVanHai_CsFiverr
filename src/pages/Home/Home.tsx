@@ -107,13 +107,15 @@ export default function Home({ }: Props) {
 
   window.addEventListener("scroll", () => {
     let headerr = document.querySelector("header") as HTMLElement;
-    
-    if (window.pageYOffset > 0) {
-      headerr.style.backgroundColor = '#1dbf73';
-    } else {
-      headerr.style.backgroundColor = '#ffffff00';
-    }
-    });
+    if(headerr) {
+      if (window.pageYOffset > 0) {
+        headerr.style.backgroundColor = '#1dbf73';
+      } else {
+        headerr.style.backgroundColor = '#ffffff00';
+      }
+      };
+
+    })
     
 
 

@@ -105,19 +105,17 @@
                             
                             .nameGr {
                                 color: #404145; 
+                                margin-bottom: 0;
+                                font-weight: 600;
+                                cursor: default;
                             }
-                            &:hover {
-                                .nameGr {
-                                    text-decoration: underline;    
-                                }
-                            }
-
+                           
                             .list-detail {
                                 padding-top: 10px;
                                 li {
                                     padding: 0 0 8px 0;
                                     &:hover a {
-                                        opacity: 0.8;
+                                        text-decoration: underline;
                                     }
 
                                 }

@@ -9,9 +9,7 @@ type Props = {
 }
 export default function ListJod({ }: Props) {
   let [searchParams, setSearchParams] = useSearchParams();
-  console.log(searchParams.get('keyword'))
   const { arrJod } = useSelector((state: RootState) => state.listjodreduces);
-  console.log('arjod', arrJod)
   const dispatch: AppDispatch = useDispatch()
 
   const getJodByKeywordApi = async () => {
@@ -30,12 +28,31 @@ export default function ListJod({ }: Props) {
       console.log(err);
     }
   }
+
+  const getJodDetailApi = async () => {
+    try {
+      if (searchParams.get('key') !== null) {
+        const result = await http.get(`/cong-viec/lay-cong-viec-theo-chi-tiet-loai/${searchParams.get('key')}`);
+        dispatch(getListjod(result.data.content))
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+
   useEffect(() => {
-    // const action = getJodApi();
-    // dispatch(action);
+
     getJodByKeywordApi()
 
   }, [searchParams.get('keyword')])
+
+  useEffect(() => {
+    let tagH2 = document.querySelector('#errtext') as HTMLElement
+    tagH2.style.display = 'none'
+    getJodDetailApi()
+
+  },[searchParams.get('key')])
 
   return (
     <div>

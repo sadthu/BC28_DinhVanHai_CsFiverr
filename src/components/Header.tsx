@@ -11,7 +11,6 @@ export default function Header({ }: Props) {
   const dispatch: AppDispatch = useDispatch();
   const { arrMenuJod } = useSelector((state: RootState) => state.listmenureducer);
   const { userLogin } = useSelector((state: RootState) => state.userReduce);
-  console.log({ arrMenuJod })
   const renderNavlink = () => {
     if (userLogin) {
       return <>
@@ -74,19 +73,20 @@ export default function Header({ }: Props) {
           <ul className='d-flex justify-content-between'>
             {arrMenuJod.map((item: TypeMenu, index: number) => {
               let dsNhom = item.dsNhomChiTietLoai;
-              console.log({ item })
               return <li key={index}>
                 <a href="#" className='namejod'>{item.tenLoaiCongViec}</a>
                 <div className='modal_hover'>
                   <ul className='ul-wrap'>
                     {dsNhom.map((item: ArrGrDetail, index: number) => {
-                      console.log({ item })
                       return <li key={index}>
-                        <a href="#" className='nameGr'>{item.tenNhom}</a>
+                        <p className='nameGr'>{item.tenNhom}</p>
                         <ul className='list-detail'>
                           {item.dsChiTietLoai.map((item: ArrDetail, index: number) => {
                             return <li key={index}>
-                              <a href="#" className='nameDetail'>{item.tenChiTiet}</a>
+                              <a href="#" className='nameDetail' onClick={(e) => {
+                                e.preventDefault()
+                                navigate(`/hometemplate/listjod?key=${item.id}`)
+                              }}>{item.tenChiTiet}</a>
                             </li>
                           })}
                         </ul>
