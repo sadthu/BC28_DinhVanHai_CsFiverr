@@ -74,7 +74,10 @@ export default function Header({ }: Props) {
             {arrMenuJod.map((item: TypeMenu, index: number) => {
               let dsNhom = item.dsNhomChiTietLoai;
               return <li key={index}>
-                <a href="#" className='namejod'>{item.tenLoaiCongViec}</a>
+                <a href="#" className='namejod' onClick={(e) => {
+                  e.preventDefault()
+                  navigate(`/hometemplate/Typejod?keyword=${item.id}`)
+                }}>{item.tenLoaiCongViec}</a>
                 <div className='modal_hover'>
                   <ul className='ul-wrap'>
                     {dsNhom.map((item: ArrGrDetail, index: number) => {
