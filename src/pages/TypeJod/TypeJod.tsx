@@ -56,6 +56,11 @@ export default function TypeJod({ }: Props) {
     }
   }
 
+  if (arrTypeJod === null) {
+    getJodApi()
+    window.location.reload()
+  } 
+  
   useEffect(() => {
     getJodApi()
   }, [searchParam.get('keyword')])
