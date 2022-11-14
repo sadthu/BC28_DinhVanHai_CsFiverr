@@ -76,7 +76,7 @@ export default function Header({ }: Props) {
               return <li key={index}>
                 <a href="#" className='namejod' onClick={(e) => {
                   e.preventDefault()
-                  navigate(`/hometemplate/Typejod?keyword=${item.id}`)
+                  navigate(`/hometemplate/typejod?keyword=${item.id}`)
                 }}>{item.tenLoaiCongViec}</a>
                 <div className='modal_hover'>
                   <ul className='ul-wrap'>

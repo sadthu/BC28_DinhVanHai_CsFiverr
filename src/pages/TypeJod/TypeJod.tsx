@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import Slider from 'react-slick';
+import { http } from '../../util/Setting';
+import { getNameTypeJod } from '../../redux/reducers/cpnTypeJod';
+import { useDispatch, useSelector } from 'react-redux';
+import { AppDispatch, RootState } from '../../redux/configStore';
+import NameJod from '../../components/NameJod';
+import { getListjod } from '../../redux/reducers/ListjodReducer';
+import NameDetailJod from '../../components/NameDetailJod';
+import RenderCompunent from '../../components/RenderCompunent';
+import {setStoreJSON} from '../../util/Setting'
 
 type Props = {}
 
 export default function TypeJod({ }: Props) {
+
   const settings = {
     className: "slider variable-width",
     dots: false,
@@ -13,12 +24,53 @@ export default function TypeJod({ }: Props) {
     slidesToScroll: 4,
     variableWidth: true
   };
+
+  const { arrTypeJod } = useSelector((state: RootState) => state.cpmtypejod)
+
+  const dispatch: AppDispatch = useDispatch()
+
+  const [searchParam, setsearchParams] = useSearchParams()
+  console.log(searchParam.get('keyword'))
+  const getJodApi = async () => {
+    try {
+      if (searchParam.get('keyword') !== null) {
+        const result = await http.get(`/cong-viec/lay-chi-tiet-loai-cong-viec/${searchParam.get('keyword')}`);
+        setStoreJSON('listJod', result.data.content)
+        dispatch(getNameTypeJod(result.data.content))
+        console.log('sdgdgdsg',result.data.content)
+      }
+    } catch (err) {
+      console.log('sfsafassf',err);
+      
+    }
+  }
+
+  const getJodDetailApi = async () => {
+    try {
+      if (searchParam.get('key') !== null) {
+        const result = await http.get(`/cong-viec/lay-cong-viec-theo-chi-tiet-loai/${searchParam.get('key')}`);
+        dispatch(getListjod(result.data.content))
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  useEffect(() => {
+    getJodApi()
+  }, [searchParam.get('keyword')])
+
+
+  useEffect(() => {
+    getJodDetailApi()
+  }, [searchParam.get('key')])
+
   return (
     <div>
       <div className='container typejod'>
         <div className='slider'>
           <div className='slider_img'>
-            <h3 className='title'>Graphics & Design</h3>
+            <h3 className='title'>{arrTypeJod[0].tenLoaiCongViec}</h3>
             <p className='text'>Designs to make you stand out.</p>
             <button className='slider-btn'>
               <i className="fa-sharp fa-solid fa-circle-play"></i>
@@ -26,7 +78,7 @@ export default function TypeJod({ }: Props) {
             </button>
           </div>
           <div className='slider_popular'>
-            <h4 className='popular-title'>Most popular in Graphics & Design</h4>
+            <h4 className='popular-title'>Most popular in {arrTypeJod[0].tenLoaiCongViec}</h4>
             <Slider {...settings}>
               <div className='slider-wrap'>
                 <a href="#" className='d-flex popular-item'>
@@ -96,7 +148,11 @@ export default function TypeJod({ }: Props) {
           </div>
         </div>
 
-        <div className='content'>dgdgdgdg</div>
+        <h4 className='explore'>{arrTypeJod[0].tenLoaiCongViec}</h4>
+
+        <div className='content'>
+          <RenderCompunent Component={NameJod}/>
+        </div>
 
         <div className='typejod_services'>
           <h4 className='services-title'>Most popular in Graphics & Design</h4>

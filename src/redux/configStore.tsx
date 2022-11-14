@@ -1,4 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
+import cpnTypeJod from './reducers/cpnTypeJod'
 import formSinginReducer from './reducers/formSinginReducer'
 import ListjodReducer from './reducers/ListjodReducer'
 import listMenuReducer from './reducers/listMenuReducer'
@@ -9,7 +10,8 @@ export const store = configureStore({
     listjodreduces:ListjodReducer,
     userReduce:useReducer,
     userinfor:formSinginReducer,
-    listmenureducer:listMenuReducer
+    listmenureducer:listMenuReducer,
+    cpmtypejod:cpnTypeJod,
   },
 })
 
