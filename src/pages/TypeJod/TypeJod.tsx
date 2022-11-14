@@ -34,7 +34,7 @@ export default function TypeJod({ }: Props) {
   console.log(searchParam.get('keyword'))
   const getJodApi = async () => {
     try {
-      if (searchParam.get('keyword') !== null) {
+      if (searchParam.get('keyword')) {
         const result = await http.get(`/cong-viec/lay-chi-tiet-loai-cong-viec/${searchParam.get('keyword')}`);
         setStoreJSON('listJod', result.data.content)
        
