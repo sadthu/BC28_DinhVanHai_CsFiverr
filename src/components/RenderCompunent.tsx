@@ -8,11 +8,11 @@ type Props = {Component: React.FC}
 export default function RenderCompunent({Component}: Props) {
     const [searchParam,setsearchParams] = useSearchParams()
     if( searchParam.get('key') !== null) {
-        Component = NameDetailJod
+      Component = NameDetailJod
     }
   return (
     <div>
-        <Component/>
+      <Component/>
     </div>
   )
 }
