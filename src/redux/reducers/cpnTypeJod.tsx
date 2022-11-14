@@ -25,7 +25,7 @@ export interface NameJodState {
 }
 
 const initialState:NameJodState = {
-    arrTypeJod:getStoreJSON('listJod')
+    arrTypeJod: getStoreJSON('listJod')
 }
 
 const cpnTypeJod = createSlice({

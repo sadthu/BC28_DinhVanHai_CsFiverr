@@ -27,6 +27,7 @@ export default function TypeJod({ }: Props) {
 
   const { arrTypeJod } = useSelector((state: RootState) => state.cpmtypejod)
 
+  console.log({arrTypeJod})
   const dispatch: AppDispatch = useDispatch()
 
   const [searchParam, setsearchParams] = useSearchParams()
@@ -36,6 +37,7 @@ export default function TypeJod({ }: Props) {
       if (searchParam.get('keyword') !== null) {
         const result = await http.get(`/cong-viec/lay-chi-tiet-loai-cong-viec/${searchParam.get('keyword')}`);
         setStoreJSON('listJod', result.data.content)
+       
         dispatch(getNameTypeJod(result.data.content))
         console.log('sdgdgdsg',result.data.content)
       }
@@ -59,7 +61,6 @@ export default function TypeJod({ }: Props) {
   useEffect(() => {
     getJodApi()
   }, [searchParam.get('keyword')])
-
 
   useEffect(() => {
     getJodDetailApi()
