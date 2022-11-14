@@ -34,16 +34,14 @@ export default function TypeJod({ }: Props) {
   console.log(searchParam.get('keyword'))
   const getJodApi = async () => {
     try {
-      if (searchParam.get('keyword')) {
+      if (searchParam.get('keyword') !== null) {
         const result = await http.get(`/cong-viec/lay-chi-tiet-loai-cong-viec/${searchParam.get('keyword')}`);
-        setStoreJSON('listJod', result.data.content)
-       
+        setStoreJSON('listJod',result.data.content)
         dispatch(getNameTypeJod(result.data.content))
-        console.log('sdgdgdsg',result.data.content)
+        console.log(result.data.content)
       }
     } catch (err) {
-      console.log('sfsafassf',err);
-      
+      console.log(err);
     }
   }
 
