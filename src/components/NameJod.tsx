@@ -16,20 +16,20 @@ export default function NameJod({ }: Props) {
 
         <div className='namejod'>
             <div className='namejod_list'>
-                {listGr.map((item: ArrGrDetail, index: number) => {
+                {listGr?.map((item: ArrGrDetail, index: number) => {
                     return <div className='namejod-item' key={index}>
                         <div className='namejod_img'>
-                            <img src={item.hinhAnh} alt="" />
+                            <img src={item?.hinhAnh} alt="" />
                         </div>
                         <div className='namejod_text'>
-                            <h5>{item.tenNhom}</h5>
+                            <h5>{item?.tenNhom}</h5>
                             <ul>
-                                {item.dsChiTietLoai.map((item: ArrDetail, index:number) => {
+                                {item?.dsChiTietLoai?.map((item: ArrDetail, index:number) => {
                                     return <>
                                         <li key={index}><a href="#" onClick={(e) => {
                                             e.preventDefault()
-                                            navigate(`/hometemplate/typejod?key=${item.id}`)
-                                        }}>{item.tenChiTiet}</a></li>
+                                            navigate(`/hometemplate/typejod?key=${item?.id}`)
+                                        }}>{item?.tenChiTiet}</a></li>
                                     </>
                                 })}
                             </ul>
