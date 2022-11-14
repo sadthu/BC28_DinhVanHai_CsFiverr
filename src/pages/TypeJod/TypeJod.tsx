@@ -70,7 +70,7 @@ export default function TypeJod({ }: Props) {
       <div className='container typejod'>
         <div className='slider'>
           <div className='slider_img'>
-            <h3 className='title'>{arrTypeJod[0].tenLoaiCongViec}</h3>
+            <h3 className='title'>{arrTypeJod[0]?.tenLoaiCongViec}</h3>
             <p className='text'>Designs to make you stand out.</p>
             <button className='slider-btn'>
               <i className="fa-sharp fa-solid fa-circle-play"></i>
@@ -78,7 +78,7 @@ export default function TypeJod({ }: Props) {
             </button>
           </div>
           <div className='slider_popular'>
-            <h4 className='popular-title'>Most popular in {arrTypeJod[0].tenLoaiCongViec}</h4>
+            <h4 className='popular-title'>Most popular in {arrTypeJod[0]?.tenLoaiCongViec}</h4>
             <Slider {...settings}>
               <div className='slider-wrap'>
                 <a href="#" className='d-flex popular-item'>
@@ -148,7 +148,7 @@ export default function TypeJod({ }: Props) {
           </div>
         </div>
 
-        <h4 className='explore'>{arrTypeJod[0].tenLoaiCongViec}</h4>
+        <h4 className='explore'>{arrTypeJod[0]?.tenLoaiCongViec}</h4>
 
         <div className='content'>
           <RenderCompunent Component={NameJod}/>

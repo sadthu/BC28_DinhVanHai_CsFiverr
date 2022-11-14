@@ -9,7 +9,7 @@ type Props = {}
 export default function NameJod({ }: Props) {
     const { arrTypeJod } = useSelector((state: RootState) => state.cpmtypejod)
     // console.log({ arrTypeJod })
-    const listGr = arrTypeJod[0].dsNhomChiTietLoai
+    const listGr = arrTypeJod[0]?.dsNhomChiTietLoai
 
     const navigate = useNavigate()
     return (

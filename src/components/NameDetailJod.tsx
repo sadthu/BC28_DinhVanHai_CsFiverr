@@ -10,7 +10,7 @@ export default function NameDetailJod({ }: Props) {
 
     return (
         <div className='row listjod_wrap'>
-            {arrJod.map((item: Typejod, index: number) => {
+            {arrJod?.map((item: Typejod, index: number) => {
                 return <div className='col-12 col-xl-3 col-lg-4 col-sm-6 listjod-item' key={index}>
                     <div className='listjod_wrap-item'>
                         <div className='img'>
