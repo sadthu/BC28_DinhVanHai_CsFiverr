@@ -74,7 +74,7 @@ export default function Header({ }: Props) {
             {arrMenuJod.map((item: TypeMenu, index: number) => {
               let dsNhom = item.dsNhomChiTietLoai;
               return <li key={index}>
-                <a href="#" className='namejod' onClick={(e) => {
+                <a className='namejod' onClick={(e) => {
                   e.preventDefault()
                   navigate(`/hometemplate/typejod?keyword=${item.id}`)
                 }}>{item.tenLoaiCongViec}</a>
