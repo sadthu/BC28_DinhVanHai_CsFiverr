@@ -28,6 +28,7 @@ export default function Join({}: Props) {
   return (
     <div className='singin login'>
       <div className="container">
+        <a href="/"><i className="fa-solid fa-angle-left"></i></a>
         <form onSubmit={formik.handleSubmit}>
           <h3>ĐĂNG NHẬP</h3>
           <label><b>Email</b></label><br />

@@ -36,6 +36,8 @@ export default function SingIn({ }: Props) {
   return (
     <div className='singin'>
       <div className="container">
+        <a href="/"><i className="fa-solid fa-angle-left"></i></a>
+
         <form onSubmit={formik.handleSubmit}>
           <h3>ĐĂNG KÝ</h3>
           <label htmlFor="TK"><b>Tài khoản</b></label><br />
