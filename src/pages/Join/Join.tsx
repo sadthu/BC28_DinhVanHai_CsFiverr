@@ -26,7 +26,7 @@ export default function Join({}: Props) {
     }
   }); 
   return (
-    <div className='singin'>
+    <div className='singin login'>
       <div className="container">
         <form onSubmit={formik.handleSubmit}>
           <h3>ĐĂNG NHẬP</h3>
